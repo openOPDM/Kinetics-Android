@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button
+            android:id="@android:id/button1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_weight="1"
+            />
+
+    <ImageButton
+            android:id="@android:id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/action_about"
+            style="?android:attr/buttonBarButtonStyle"
+            android:contentDescription="@string/desc_info_bt"/>
+
+</LinearLayout>

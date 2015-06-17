@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Account">
+
+        <Preference android:title="Account email"
+                    android:key="@string/key_account_name"
+                    android:enabled="false"/>
+        <Preference android:title="Logout"
+                    android:key="@string/key_logout"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Network">
+        <ListPreference android:title="Sync interval"
+                        android:key="@string/key_interval"
+                        android:entries="@array/sync_interval"
+                        android:entryValues="@array/sync_interval_values"
+                        android:defaultValue="0"
+                        android:dialogTitle="Select sync time interval"
+                        android:summary="@string/pref_sync_time_summary"
+                />
+
+        <CheckBoxPreference android:title="@string/sync_on_start_label"
+                            android:key="@string/key_sync_start"
+                            android:defaultValue="true"
+                            android:summary="Perform sync after application launch"
+                />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Test options">
+
+        <CheckBoxPreference android:title="Notification with vibration"
+                            android:summary="To confirm test start and end"
+                            android:key="@string/key_vibrate"
+                            android:defaultValue="true"
+                />
+
+        <!-- <Preference android:title="PST Calibration"
+                    android:key="@string/key_calibrate"
+                    android:defaultValue="false"
+                /> -->
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About">
+
+        <Preference android:title="@string/dialog_title_terms"
+                    android:key="@string/key_terms"
+                />
+        <Preference android:title="@string/dialog_title_policy"
+                    android:key="@string/key_policy"
+                />
+        <Preference android:title="Application version"
+                    android:key="@string/key_version"
+                    android:enabled="false"
+                />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

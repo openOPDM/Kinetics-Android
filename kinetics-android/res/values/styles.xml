@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ListText">
+        <item name="android:textAppearance">?android:attr/textAppearanceListItem</item>
+        <item name="android:layout_height">?android:attr/listPreferredItemHeight</item>
+    </style>
+
+    <style name="ListRow">
+        <item name="android:paddingLeft">?android:attr/listPreferredItemPaddingLeft</item>
+        <item name="android:paddingRight">?android:attr/listPreferredItemPaddingRight</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ListRow.Small">
+        <item name="android:minHeight">?android:attr/listPreferredItemHeightSmall</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+</resources>

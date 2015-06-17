@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kinetics Mobility</string>
+    <string name="provider_label">Test data</string>
+    <string name="authenticator_label">Kinetics Mobility</string>
+    <string name="create_account_btn_label_text">Create Account</string>
+    <string name="sign_in_btn_label">Sign In</string>
+    <string name="email_label_text">Email</string>
+    <string name="password_label_text">Password</string>
+    <string name="password_retype_label_text">Retype Password</string>
+    <string name="test_list_activity_label">Test Room</string>
+
+    <!-- dialogs -->
+    <string name="dialog_loading_message">Initializing…</string>
+    <string name="dialog_logging_in_message">Logging in…</string>
+    <string name="dialog_submit_message">Submitting…</string>
+
+    <string name="login_success_message">Your account had successfully authorized
+    </string>
+    <string name="error_title">Error</string>
+    <string name="retry">Retry</string>
+    <string name="wrong_email_error_label_text">Enter valid email</string>
+    <string name="empty_field_error_label_text">Empty field</string>
+    <string name="dialog_delete_test_message">Action cannot be undone</string>
+    <string name="dialog_delete_title">Delete?</string>
+    <string name="dialog_sync_title">Sync setting is Off</string>
+    <string name="dialog_sync_message">%1$s won\'t work.\nEnable %2$s?</string>
+
+    <!-- toasts -->
+    <string name="no_network_message">Network unavailable, please try again later.</string>
+    <string name="app_logo">Application logo image</string>
+    <string name="first_name_label">First Name</string>
+    <string name="second_name_label">Second Name</string>
+    <string name="sign_up_btn">Sign Up</string>
+    <string name="error_pass_match">Passwords do not match</string>
+    <string name="error_customer_load">Failed to load project data</string>
+    <string name="dialog_confirm_title">Confirm Account</string>
+    <string name="confirmation_message">You have been sent an account confirmation code to your registered email
+        address. Please copy and paste it below to confirm your account.
+    </string>
+
+    <string name="confirmation_code_label">Confirmation Code</string>
+    <string name="submit_label">Submit</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="account_success_create_message_text">Account successfully created!</string>
+    <string name="only_one_account_message">Sorry! But You already have one authorized account!</string>
+    <string name="refresh_label">Refresh</string>
+    <string name="credentials_invalidated">Your account credentials are not longer valid.</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="desc_info_bt">Info button</string>
+    <string name="test_runs_label">Test Runs History</string>
+    <string name="test_tug_label">Start Timed Up and Go test</string>
+    <string name="test_ps_label">Start Postural Sway test</string>
+    <string name="no_tests_label">No tests yet</string>
+    <string name="settings_label">Settings</string>
+    <string name="test_stage_label">Stage</string>
+    <string name="test_start">Start the Test</string>
+    <string name="test_run">Test is Running</string>
+    <string name="test_calibrate">Preparing for test</string>
+    <string name="test_finish">Test is Finished</string>
+    <string name="test_time_label">Time spent</string>
+    <string name="is_valid_label">Is Valid</string>
+    <string name="note_label">Note</string>
+    <string name="dialog_enter_value">Enter value</string>
+    <string name="new_value">Enter value</string>
+    <string name="dialog_choose_value">Pick value</string>
+    <string name="dialog_choose_project">Pick a project to enter</string>
+    <string name="unlock_label">Double tap to unlock the screen</string>
+    <string name="report_label">%s Report</string>
+    <string name="instruction_title">%s Instruction</string>
+    <string name="timestamp_label">Timestamp</string>
+    <string name="duration_label">Test Duration</string>
+    <string name="score_label">Total score</string>
+    <string name="action_label">Select tests</string>
+    <string name="action_one_select_label">One item selected</string>
+    <string name="action_multiple_select_label">%s items selected</string>
+    <string name="widget_text_hint">…</string>
+    <string name="toast_test_save_label">Saving test results…</string>
+    <string name="toast_required_fields_label">Please, fill in highlighted field values.</string>
+    <string name="run_test_label">Running new test</string>
+    <string name="test_time_left_label">Seconds left</string>
+    <string name="test_deleted_on_server">Selected Test Session was deleted on server.</string>
+    <string name="enter_code_btn">Enter code</string>
+
+    <!-- Settings -->
+    <string name="key_account_name">key_account_name</string>
+    <string name="key_interval">key_interval</string>
+    <string name="key_logout">key_logout</string>
+    <string name="pref_sync_time_summary">Time between sync: %s</string>
+    <string name="key_vibrate">key_vibrate</string>
+    <string name="key_version">key_version</string>
+    <string name="key_sync_start">key_sync_start</string>
+    <string name="key_calibrate">key_calibrate</string>
+    <string name="key_terms">key_terms</string>
+    <string name="key_first_start">key_first_start</string>
+    <string name="setting_calibrated_device">Your device is calibrated. Press to recalibrate.</string>
+    <string name="setting_uncalibrated_device">No calibration is done. Press to calibrate.</string>
+    <string name="global_sync">Global Sync</string>
+    <string name="auto_sync">Kinetics AutoSync</string>
+    <string name="sync_on_start_label">Sync on start</string>
+    <string name="sync_periodic_label">Periodic sync</string>
+
+    <!-- Formatted text -->
+    <string name="instruction_calibrate"><![CDATA[
+    <h2>To calibrate device, please follow next steps:</h2>
+    <big>
+        1. Place device on a table;<br/>
+        2. Turn off device vibrator mode and make sure there are no vibration sources nearby;<br/>
+        3. Press button below to start.</big>
+        <br/><br/><i>Estimated time for calibration is about 1 minute</i>
+        ]]>
+    </string>
+
+    <string name="terms_checkbox_title">By signing up, you agree to the &lt;a href=&quot;show_terms&quot;&gt;Terms of Service&lt;/a&gt; and &lt;a href=&quot;show_policy&quot;&gt;Privacy Policy&lt;/a&gt;</string>
+    <string name="unsupported_warning">We\'re sorry but this device is not yet certified. Certified phones include %s. If you use an unsupported phone, results may be inconsistent with other phones.</string>
+    <string name="dialog_title_first_start">Uncertified phone</string>
+    <string name="button_ok">OK</string>
+    <string name="dialog_title_terms">Terms of Service</string>
+    <string name="dialog_title_policy">Privacy Policy</string>
+    <string name="button_close">Close</string>
+    <string name="key_policy">key_policy</string>
+
+</resources>

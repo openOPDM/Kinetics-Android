@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello kinetics-filter-lib!</string>
+    <string name="lib_name">kinetics-filter-lib</string>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:padding="8dp">
+
+    <LinearLayout
+            android:id="@+id/buttons_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/create_account_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_weight="0.5"
+                android:text="@string/create_account_btn_label_text"/>
+
+        <Button
+                android:id="@+id/sign_in_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="0.5"
+                android:text="@string/sign_in_btn_label">
+            <requestFocus/>
+        </Button>
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+        <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:id="@+id/logo"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon"
+                android:contentDescription="@string/app_logo"/>
+
+        <EditText
+                android:id="@+id/email_ef"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_label_text"
+                android:inputType="textEmailAddress"
+                android:saveEnabled="true"
+                android:layout_below="@id/logo"
+                android:layout_marginTop="12dp"/>
+
+        <EditText
+                android:id="@+id/password_ef"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email_ef"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/password_label_text"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:saveEnabled="true"/>
+
+        <!--
+        <TextView
+                android:id="@+id/forgot_pass_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/password_ef"
+                android:layout_below="@+id/customer_sp"
+                android:layout_marginTop="16dp"
+                android:text="@string/forgot_password"
+                android:clickable="true"/>
+                -->
+    </RelativeLayout>
+
+</RelativeLayout>

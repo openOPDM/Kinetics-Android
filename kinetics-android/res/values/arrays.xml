@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Don't change element's order for this array! -->
+    <string-array name="sync_interval">
+        <item>Manual</item>
+        <!--<item>30 sec (remove in release)</item>-->
+        <item>15 min</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+    </string-array>
+
+    <!-- Don't change element's order for this array! -->
+    <string-array name="sync_interval_values">
+        <item>0</item>
+        <!--<item>30</item>-->
+        <item>900</item>
+        <item>3600</item>
+        <item>10800</item>
+        <item>21600</item>
+    </string-array>
+
+</resources>

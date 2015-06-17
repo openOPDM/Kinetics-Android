@@ -1,0 +1,141 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lohika.components.android</groupId>
+    <artifactId>android-components-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+
+    <modules>
+        <module>net-restclient</module>
+        <module>net-restclient-test</module>
+        <module>net-sync</module>
+        <module>net-sync-test</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <junit.version>4.11</junit.version>
+        <jackson.version>1.9.12</jackson.version>
+
+        <android.platform.version>4.1.1.4</android.platform.version>
+    </properties>
+
+    <dependencies>
+        <!-- Android -->
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>${android.platform.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android-test</artifactId>
+            <version>${android.platform.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>2.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Logging library, can be configured by client -->
+        <dependency>
+            <groupId>de.akquinet.android.androlog</groupId>
+            <artifactId>androlog</artifactId>
+            <version>1.0.6</version>
+        </dependency>
+
+        <!-- UT -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>3.6.1</version>
+                    <inherited>true</inherited>
+                    <configuration>
+                        <androidManifestFile>${project.basedir}/AndroidManifest.xml</androidManifestFile>
+                        <assetsDirectory>${project.basedir}/assets</assetsDirectory>
+                        <resourceDirectory>${project.basedir}/res</resourceDirectory>
+                        <nativeLibrariesDirectory>${project.basedir}/src/main/native</nativeLibrariesDirectory>
+                        <sdk>
+                            <platform>15</platform>
+                        </sdk>
+                        <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>1.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.1</version>
+                    <configuration>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jarsigner-plugin</artifactId>
+                    <version>1.2</version>
+                    <inherited>true</inherited>
+                    <configuration>
+                        <removeExistingSignatures>true</removeExistingSignatures>
+                        <archiveDirectory/>
+                        <archive>${project.build.directory}/${project.build.finalName}.${project.packaging}</archive>
+                        <verbose>true</verbose>
+                        <certs>true</certs>
+                        <keystore>${sign.keystore}</keystore>
+                        <alias>${sign.alias}</alias>
+                        <storepass>${sign.storepass}</storepass>
+                        <keypass>${sign.keypass}</keypass>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.pyx4me</groupId>
+                    <artifactId>proguard-maven-plugin</artifactId>
+                    <version>2.0.4</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>net.sf.proguard</groupId>
+                            <artifactId>proguard</artifactId>
+                            <version>4.4</version>
+                            <scope>runtime</scope>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <proguardVersion>4.4</proguardVersion>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
